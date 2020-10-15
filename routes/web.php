@@ -1,15 +1,15 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\RatingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/users/create', [UserController::class, 'create']);
-Route::get('/users', [UserController::class, 'index']);
-Route::post('/users', [UserController::class, 'store'])->name('make.users');
+Route::view('/', 'dashboard');
 
+Route::resource('users', UserController::class)->only(['index', 'store', 'create']);
 
-Route::get('books/create', [BookController::class, 'create']);
-Route::get('/books', [BookController::class, 'index']);
-Route::post('/books', [BookController::class, 'store'])->name('make.books');
+Route::resource('books', BookController::class)->only(['index', 'store', 'create']);
+
+Route::resource('ratings', RatingController::class)->only(['create', 'store']);

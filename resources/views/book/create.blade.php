@@ -1,11 +1,14 @@
 @extends('base')
 
+@section('title')
+ lag_bok
+@endsection
 
 @section('content')
 
 <h1>Create books...</h1>
 
-<form method="post" action="{{ route('make.books')}}">
+<form method="post" action="{{ route('books.store')}}">
     @csrf
     <div class="form-group">
         <label for="title">Tittel:</label>

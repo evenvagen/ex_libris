@@ -8,7 +8,7 @@
 
 
 
-<form method="post" action="{{ route('make.users')}}">
+<form method="post" action="{{ route('users.store')}}">
     @csrf
     <div class="form-group">
         <label for="name">Name:</label>
