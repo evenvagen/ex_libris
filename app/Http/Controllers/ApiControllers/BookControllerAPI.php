@@ -7,7 +7,7 @@ use App\Models\Book;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class BookController extends Controller
+class BookControllerAPI extends Controller
 {
 
     public function __construct()
