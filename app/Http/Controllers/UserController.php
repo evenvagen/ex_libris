@@ -22,10 +22,10 @@ class UserController extends Controller
     }
 
 
-    public function store(StoreUser $user, Request $request)
+    public function store(StoreUser $request)
     {
 
-        $user->validated();
+        $request->validated();
 
 
         $user = new User([
