@@ -12,6 +12,7 @@
 @foreach ($books as $book)
 
 <p>{{$book->title}} ({{$book->author}})</p>
+<p>{{$book->ratings}}</p>
 
 @endforeach
 
