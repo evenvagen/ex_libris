@@ -23,6 +23,12 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
+
+        $request->validate([
+            'email' => 'bail|required|unique:users'
+        ]);
+
+
         $user = new User([
             'name' => $request->get('name'),
             'email' => $request->get('email'),

@@ -1,6 +1,12 @@
 @extends('base')
 
+@section('title')
+ create_user
+@endsection
+
 @section('content')
+
+
 
 <form method="post" action="{{ route('make.users')}}">
     @csrf
@@ -20,5 +26,15 @@
     </div>
     <button type="submit" class="btn btn-primary-outline">Legg til bruker</button>
 </form>
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 @endsection

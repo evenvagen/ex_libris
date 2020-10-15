@@ -1,5 +1,9 @@
 @extends('base')
 
+@section('title')
+ user_index
+@endsection
+
 
 @section('content')
 
