@@ -7,8 +7,8 @@ home_page
 
 @section('content')
 
-<p>
-her kommer linker og bedre frontend til applikasjonen
-</p>
+<livewire:hello-world>
+
+{{-- @livewire('hello-world') --}}
 
 @endsection
