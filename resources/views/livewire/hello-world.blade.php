@@ -14,6 +14,12 @@
     {{ implode(' + ', $greeting)}} {{$animal}}
     @if($loud) !!! @endif
 
+    <form action="#" wire:submit.prevent="resetName('Bingo')">
+
+        <button>Reset name</button>
+
+    </form>
+
 </div>
 
 
