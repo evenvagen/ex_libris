@@ -7,8 +7,8 @@ home_page
 
 @section('content')
 
-<livewire:hello-world>
+<livewire:counter />
 
-{{-- @livewire('hello-world') --}}
+{{-- <livewire:hello-world /> --}}
 
 @endsection
