@@ -12,6 +12,10 @@ class Counter extends Component
     public function increment()
     {
         $this->count++;
+
+        if($this->count == 10){
+            $this->count = 19;
+        };
     }
 
     public function render()
