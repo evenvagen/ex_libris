@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BookResource;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,9 @@ class BookController extends Controller
     {
         $books = Book::all();
 
-        return view('book.index', compact('books'));
+        $tests = 3.7;
+
+        return view('book.index', compact(['books', 'tests']));
     }
 
     public function create()
@@ -33,4 +36,5 @@ class BookController extends Controller
 
         return redirect('/books');
     }
+
 }
