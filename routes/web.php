@@ -6,7 +6,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/', 'dashboard');
+Route::view('/', 'dashboard')->name('dashboard');
 
 Route::resource('users', UserController::class)->only(['index', 'store', 'create']);
 

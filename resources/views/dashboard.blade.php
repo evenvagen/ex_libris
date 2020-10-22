@@ -9,8 +9,8 @@ home_page
 
 {{-- <livewire:counter /> --}}
 
-{{-- <livewire:hello-world /> --}}
+<livewire:hello-world />
 
 
-<livewire:show-posts post="bigdata" />
+{{-- <livewire:show-posts post="bigdata" /> --}}
 @endsection
