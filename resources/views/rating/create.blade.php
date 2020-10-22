@@ -13,20 +13,34 @@ rate_bok
 <form method="post" action="{{ route('ratings.store')}}">
     @csrf
     <div class="form-group">
-        <label for="user_id">Bruker-id:</label>
-        <input type="text" class="form-control" name="user_id"/>
+        <input type="text" class="form-control" name="user_id" placeholder="Bruker id"/>
     </div>
 
     <div class="form-group">
-        <label for="book_id">Bok-id:</label>
-        <input type="text" class="form-control" name="book_id"/>
+        <input type="text" class="form-control" name="book_id" placeholder="Bok id"/>
     </div>
 
+
+
+{{--
     <div class="form-group">
         <label for="rating">Rating:</label>
         <input type="text" class="form-control" name="rating"/>
-    </div>
-    <button type="submit" class="btn btn-primary-outline">Legg til rating av bok</button>
+    </div> --}}
+
+    <select class="form-control" name="rating" placeholder="Vurdering">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+
+
+
+
+    <button type="submit" class="btn btn-primary">Legg til rating av bok</button>
 </form>
 
 @endsection
