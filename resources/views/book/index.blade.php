@@ -11,7 +11,7 @@
 
 @foreach ($books as $book)
 
-<p>{{$book->title}} ({{$book->author}}) ({{$tests}})</p>
+<p>{{$book->title}}-{{$book->author}} ({{$tests}})</p>
 
 
 @endforeach
