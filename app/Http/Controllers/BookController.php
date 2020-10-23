@@ -12,9 +12,7 @@ class BookController extends Controller
     {
         $books = Book::all();
 
-        $tests = 5.7;
-
-        return view('book.index', compact(['books', 'tests']));
+        return view('book.index', compact(['books']));
     }
 
     public function create()
