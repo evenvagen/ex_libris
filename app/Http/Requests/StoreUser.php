@@ -11,7 +11,8 @@ class StoreUser extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'bail|required|unique:users'
+            'email' => 'bail|required|unique:users',
+            'password' => 'required|confirmed',
         ];
     }
 

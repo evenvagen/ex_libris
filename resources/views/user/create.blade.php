@@ -20,11 +20,11 @@
       </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" name="password" placeholder="Password" />
+        <input type="password" class="form-control" name="password" placeholder="Password" />
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" name="password" placeholder="Confirm password" />
+        <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" />
     </div>
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
