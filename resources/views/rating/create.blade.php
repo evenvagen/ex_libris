@@ -1,4 +1,4 @@
-@extends('base')
+@extends('dashboard')
 
 @section('title')
 rate_bok
@@ -6,7 +6,7 @@ rate_bok
 
 
 
-@section('content')
+@section('main')
 
 <div class="container">
 
@@ -21,14 +21,6 @@ rate_bok
     <div class="form-group">
         <input type="text" class="form-control" name="book_id" placeholder="Bok id"/>
     </div>
-
-
-
-{{--
-    <div class="form-group">
-        <label for="rating">Rating:</label>
-        <input type="text" class="form-control" name="rating"/>
-    </div> --}}
 
     <select class="form-control" name="rating" placeholder="Vurdering">
         <option value="1">1</option>

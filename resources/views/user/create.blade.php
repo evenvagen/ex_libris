@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+<div class="container mt-4">
 
 <h1>Create profile</h1>
 <form method="post" action="{{ route('users.store')}}">
@@ -22,7 +22,11 @@
     <div class="form-group">
         <input type="text" class="form-control" name="password" placeholder="Password" />
     </div>
-    <button type="submit" class="btn btn-primary">Legg til bruker</button>
+
+    <div class="form-group">
+        <input type="text" class="form-control" name="password" placeholder="Confirm password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
 <br>
@@ -36,5 +40,6 @@
         </ul>
     </div>
 @endif
+</div>
 
 @endsection

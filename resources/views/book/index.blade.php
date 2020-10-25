@@ -1,11 +1,11 @@
-@extends('base')
+@extends('dashboard')
 
 @section('title')
  view_books
 @endsection
 
 
-@section('content')
+@section('main')
 
 <div class="container">
 
