@@ -25,7 +25,7 @@
             <a class="nav-link" href="{{ route('dashboard') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             {{-- Ternary operator --}}
-            <li class="nav-item active">
+            <li class="nav-item">
             <a class="nav-link" href="{{ route('books.index')}}">Books</a>
             </li>
             <li class="nav-item">
