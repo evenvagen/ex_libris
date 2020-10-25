@@ -7,10 +7,8 @@ home_page
 
 @section('content')
 
-{{-- <livewire:counter /> --}}
-
-<livewire:hello-world />
+{{-- <livewire:hello-world /> --}}
 
 
-{{-- <livewire:show-posts post="bigdata" /> --}}
+
 @endsection

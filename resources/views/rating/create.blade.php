@@ -8,6 +8,8 @@ rate_bok
 
 @section('content')
 
+<div class="container">
+
 <h1>Rate books...</h1>
 
 <form method="post" action="{{ route('ratings.store')}}">
@@ -41,6 +43,8 @@ rate_bok
 
 
     <button type="submit" class="btn btn-primary">Legg til rating av bok</button>
+
+</div>
 </form>
 
 @endsection

@@ -7,6 +7,8 @@
 
 @section('content')
 
+<div class="container">
+
 <h1>Books...</h1>
 
 @foreach ($books as $book)
@@ -18,4 +20,5 @@
 
 @endforeach
 
+</div>
 @endsection
