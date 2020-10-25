@@ -20,7 +20,8 @@ class StoreUser extends FormRequest
     public function messages(){
         return [
             'email.required' => 'E-post feltet må fylles ut',
-            'email.unique' => 'Denne e-posten finnes allerede i systemet'
+            'email.unique' => 'Denne e-posten finnes allerede i systemet',
+            'password.confirmed' => 'Passordene stemmer ikke overens'
         ];
     }
 }
