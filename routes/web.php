@@ -6,10 +6,18 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::view('/', 'dashboard')->name('dashboard');
+Auth::routes();
 
-Route::resource('users', UserController::class)->only(['index', 'store', 'create']);
+Route::group(['middleware' => ['auth']], function(){
 
-Route::resource('books', BookController::class)->only(['index', 'store', 'create']);
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
-Route::resource('ratings', RatingController::class)->only(['create', 'store']);
+    Route::resource('users', UserController::class)->only(['index', 'store', 'create']);
+
+    Route::resource('books', BookController::class)->only(['index', 'store', 'create']);
+
+    Route::resource('ratings', RatingController::class)->only(['create', 'store']);
+
+});
+
+
