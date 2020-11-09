@@ -23,6 +23,7 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => 1,
             'title' => $this->faker->citySuffix,
             'author' => $this->faker->name,
             'description' => Str::random(11)
