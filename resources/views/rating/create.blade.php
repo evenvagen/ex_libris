@@ -1,4 +1,4 @@
-@extends('dashboard')
+@extends('layouts.dashboard')
 
 @section('title')
 rate_bok
@@ -15,13 +15,13 @@ rate_bok
 <form method="post" action="{{ route('ratings.store')}}">
     @csrf
     <div class="form-group">
-    <input type="hidden" value="{{ Auth::user()->id }}"/>
+    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
     </div>
 
 
 
 
-    <select class="form-control" name="rating" placeholder="Vurdering">
+    <select class="form-control-lg" name="book_id" placeholder="Vurdering">
         @foreach($books as $book)
         @if(Auth::user()->id == $book->user_id)
     <option value="{{$book->id}}">{{$book->title}}</option>
@@ -32,11 +32,9 @@ rate_bok
 
 
     <select class="form-control" name="rating" placeholder="Vurdering">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+        @for($i = 0; $i < 5; $i++)
+    <option value="{{$i+1}}">{{$i+1}}</option>
+        @endfor
     </select>
 
 
@@ -45,7 +43,7 @@ rate_bok
 
 
 
-    <button type="submit" class="btn btn-primary">Legg til rating av bok</button>
+    <button type="submit" class="btn btn-outline-success">Legg til vurdering</button>
 
 </div>
 </form>

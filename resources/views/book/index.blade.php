@@ -29,7 +29,7 @@
       <th scope="row">{{$key +1}}</th>
       <td>{{$book->title}}</td>
       <td>{{$book->author}}</td>
-      <td>{{$book->ratings->avg('rating')}}</td>
+      <td class="text-success">{{$book->ratings->avg('rating')}}</td>
       </tr>
       @endforeach
     </tbody>
