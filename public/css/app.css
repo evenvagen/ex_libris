@@ -10903,3 +10903,17 @@ a.text-dark:focus {
   }
 }
 
+body,
+html {
+  height: 100%;
+  margin: 0;
+  /* The image used */
+  background-image: url(/images/bok.jpg?5c157124a5a72d7fd25d3242f0a9a616);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

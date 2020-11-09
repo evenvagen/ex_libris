@@ -23,14 +23,17 @@
       </tr>
     </thead>
 
+
     <tbody>
         @foreach ($books as $key => $book)
+        @if(Auth::user()->id == $book->user_id)
       <tr>
       <th scope="row">{{$key +1}}</th>
       <td>{{$book->title}}</td>
       <td>{{$book->author}}</td>
       <td class="text-success">{{$book->ratings->avg('rating')}}</td>
       </tr>
+      @endif
       @endforeach
     </tbody>
   </table>
