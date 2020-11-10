@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $books = Book::all();
+        $books = Book::where('user_id', NULL)->get();
 
         return view('home', compact('books'));
     }

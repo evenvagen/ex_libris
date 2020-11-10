@@ -27,7 +27,6 @@
 
     <tbody>
         @foreach ($books as $key => $book)
-        @if(Auth::user()->id == $book->user_id)
       <tr>
       <th scope="row">{{$key +1}}</th>
       <td>{{$book->title}}</td>
@@ -35,7 +34,6 @@
       <th scope="col">{{$book->genre}}</th>
       <td class="text-success">{{round($book->ratings->avg('rating'), 1)}}</td>
       </tr>
-      @endif
       @endforeach
     </tbody>
   </table>
