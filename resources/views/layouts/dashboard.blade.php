@@ -16,14 +16,14 @@ home_page
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ route('dashboard') }}">Hjem <span class="sr-only">(current)</span></a>
             </li>
             {{-- Ternary operator --}}
             <li class="nav-item">
-            <a class="nav-link" href="{{ route('books.index')}}">Books</a>
+            <a class="nav-link" href="{{ route('books.index')}}">Bokhylle</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ratings.create')}}">Rate books</a>
+                <a class="nav-link" href="{{ route('ratings.create')}}">Vurder bøker</a>
                 </li>
             <li class="nav-item dropdown">
             </li>
@@ -54,7 +54,7 @@ home_page
                         <a class="dropdown-item" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('Logg ut') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
