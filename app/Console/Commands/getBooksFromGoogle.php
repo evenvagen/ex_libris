@@ -4,14 +4,14 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class CreateUsers extends Command
+class getBooksFromGoogle extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'users:create {amount?}';
+    protected $signature = 'command:name';
 
     /**
      * The console command description.
@@ -37,6 +37,8 @@ class CreateUsers extends Command
      */
     public function handle()
     {
-        \App\Models\User::factory($this->argument('amount'))->create();
+        return 0;
     }
+
+    //https://www.googleapis.com/books/v1/volumes?q=inauthor:barack+obama
 }
