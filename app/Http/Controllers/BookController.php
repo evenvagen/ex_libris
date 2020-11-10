@@ -27,7 +27,8 @@ class BookController extends Controller
         $book = new Book([
             'title' => $request->get('title'),
             'author' => $request->get('author'),
-            'description' => $request->get('description')
+            'description' => $request->get('description'),
+            'genre' => $request->get('genre'),
         ]);
 
         $book->save();
