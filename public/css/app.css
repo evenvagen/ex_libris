@@ -10909,6 +10909,7 @@ html {
   margin: 0;
   /* The image used */
   background-image: url(/images/bok.jpg?5c157124a5a72d7fd25d3242f0a9a616);
+  background-attachment: fixed !important;
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
