@@ -30,7 +30,8 @@ class RatingController extends Controller
         $rating = new Rating([
             'user_id' => $request->get('user_id'),
             'book_id' => $request->get('book_id'),
-            'rating' => $request->get('rating')
+            'rating' => $request->get('rating'),
+            'review' => $request->get('review')
         ]);
 
         $rating->save();

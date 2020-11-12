@@ -18,6 +18,7 @@ class CreateRatingsTable extends Migration
             $table->foreignId('book_id')->nullable()->constrained();
             $table->foreignId('user_id')->nullable()->constrained();
             $table->unsignedInteger('rating');
+            $table->text('review')->nullable();
             $table->timestamps();
         });
     }

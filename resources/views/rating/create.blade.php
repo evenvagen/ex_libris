@@ -39,6 +39,8 @@ rate_bok
 </div>
 
 
+<textarea name="review"></textarea>
+
 
     <br>
 

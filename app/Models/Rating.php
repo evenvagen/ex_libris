@@ -15,5 +15,5 @@ class Rating extends Model
         return $this->belongsTo(Book::class);
     }
 
-    protected $fillable = ['book_id', 'user_id', 'rating'];
+    protected $fillable = ['book_id', 'user_id', 'rating', 'review'];
 }
