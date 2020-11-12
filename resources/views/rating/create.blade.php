@@ -10,7 +10,6 @@ rate_bok
 
 <div class="container mt-5">
 
-<h1>Rate books...</h1>
 
 <form method="post" action="{{ route('ratings.store')}}">
     @csrf
@@ -31,11 +30,14 @@ rate_bok
 
 
 
-    <select class="form-control" name="rating" placeholder="Vurdering">
-        @for($i = 0; $i < 5; $i++)
-    <option value="{{$i+1}}">{{$i+1}}</option>
-        @endfor
-    </select>
+
+
+<div class="rating">
+    @for($i = 5; $i >= 1; $i--)
+<input type="radio" name="rating" value="{{$i}}" id="{{$i}}"><label for="{{$i}}">☆</label>
+    @endfor
+</div>
+
 
 
     <br>
