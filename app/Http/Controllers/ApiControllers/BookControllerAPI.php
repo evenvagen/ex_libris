@@ -38,7 +38,7 @@ class BookControllerAPI extends Controller
         ]);
 
         $book = new Book;
-        $book->user_id = $request->user()->id;
+        $book->user_id = $request->user_id;
         $book->title = $request->title;
         $book->description = $request->description;
         $book->author = $request->author;
