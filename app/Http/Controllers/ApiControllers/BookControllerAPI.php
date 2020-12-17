@@ -10,10 +10,10 @@ use App\Http\Controllers\Controller;
 class BookControllerAPI extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth:api')->except(['index', 'show']);
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:api')->except(['index', 'show']);
+    // }
 
 
 
@@ -71,9 +71,9 @@ class BookControllerAPI extends Controller
 
     public function destroy(Request $request, Book $book)
     {
-        if($request->user()->id != $book->user_id){
-            return response()->json(['error' => 'You can only delete your own books.'], 403);
-        }
+        // if($request->user()->id != $book->user_id){
+        //     return response()->json(['error' => 'You can only delete your own books.'], 403);
+        // }
 
         $book->delete();
         return response()->json(null,204);
